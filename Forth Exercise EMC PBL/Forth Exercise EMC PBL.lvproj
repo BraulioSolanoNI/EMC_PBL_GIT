@@ -254,7 +254,6 @@ AddOutputFilter chunkFilter
 			<Item Name="RT - Process Acquire Loop Error Flags.vi" Type="VI" URL="../support/RT - Process Acquire Loop Error Flags.vi"/>
 			<Item Name="RT - Send Message to UI.vi" Type="VI" URL="../support/RT - Send Message to UI.vi"/>
 			<Item Name="Should Log Error.vi" Type="VI" URL="../support/Should Log Error.vi"/>
-			<Item Name="Start Actuation.vi" Type="VI" URL="../support/Start Actuation.vi"/>
 			<Item Name="Start Acquisition and Logging.vi" Type="VI" URL="../support/Start Acquisition and Logging.vi"/>
 			<Item Name="Stop Acquisition and Logging.vi" Type="VI" URL="../support/Stop Acquisition and Logging.vi"/>
 			<Item Name="Write to RT Error Log.vi" Type="VI" URL="../support/Write to RT Error Log.vi"/>
@@ -1763,7 +1762,11 @@ AddOutputFilter chunkFilter
 					<Property Name="cRIOModule.NumSyncRegs" Type="Str">11111111</Property>
 					<Property Name="FPGA.PersistentID" Type="Str">{244F4EE9-72FF-458D-94C8-A2F3987BF8F0}</Property>
 				</Item>
-				<Item Name="Dependencies" Type="Dependencies"/>
+				<Item Name="Dependencies" Type="Dependencies">
+					<Item Name="vi.lib" Type="Folder">
+						<Item Name="lvSimController.dll" Type="Document" URL="/&lt;vilib&gt;/rvi/Simulation/lvSimController.dll"/>
+					</Item>
+				</Item>
 				<Item Name="Build Specifications" Type="Build">
 					<Item Name="FPGA Main" Type="{F4C5E96F-7410-48A5-BB87-3559BC9B167F}">
 						<Property Name="AllowEnableRemoval" Type="Bool">false</Property>
@@ -1867,9 +1870,6 @@ AddOutputFilter chunkFilter
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="Message Queue.lvlib" Type="Library" URL="../support/Message Queue/Message Queue.lvlib"/>
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
-				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
-			</Item>
-			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="niwd4c.dll" Type="Document" URL="niwd4c.dll">
